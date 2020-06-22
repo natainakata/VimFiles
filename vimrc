@@ -5,33 +5,19 @@ set autoread
 set hidden
 set showcmd
 
-set number
-set cursorline
-set virtualedit=onemore
-set smartindent
-set visualbell
-set showmatch
-set laststatus=2
-set wildmode=list:longest
+packadd minpac
 
-nnoremap j gj
-nnoremap k gk
+if exists('*minpac#init')
+  call minpac#init()
+  call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-syntax enable
-" colorscheme molokai
-" set t_Co=256
+  call minpac#add('tomasr/molokai')
 
-set list listchars=tab:\▸\-
-set expandtab
-set tabstop=2
-set shiftwidth=2
+endif
 
-set ignorecase
-set smartcase
-set incsearch
-set wrapscan
-set hlsearch
+command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
+command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
+call map(sort(split(globpath(&runtimepath, '_config/*.vim'))), {->[execute('exec "so" v:val')]})
 
