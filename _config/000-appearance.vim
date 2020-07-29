@@ -7,7 +7,7 @@ set showmatch
 set laststatus=2
 set wildmode=list:longest
 syntax enable
-colorscheme gruvbox
+colorscheme molokai
 set t_Co=256
 
 

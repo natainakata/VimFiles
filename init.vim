@@ -34,6 +34,7 @@ if exists('*minpac#init')
     call minpac#add('leafgarland/typescript-vim')
     call minpac#add('mhinz/vim-sayonara')
     call minpac#add('junegunn/fzf.vim')
+    call minpac#add('antoinemadec/coc-fzf')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()

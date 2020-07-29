@@ -1,4 +1,4 @@
-nmap <silent> <leader><space> :<C-u>CocList<CR>
+nmap <silent> <leader><space> :<C-u>CocFzfList<CR>
 nmap <silent> K :<C-u>call CocAction('doHover')<CR>
 nmap <silent> <F2> <Plug>(coc-rename)
 nmap <silent> gd <Plug>(coc-definition)
