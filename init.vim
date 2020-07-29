@@ -35,6 +35,7 @@ if exists('*minpac#init')
     call minpac#add('mhinz/vim-sayonara')
     call minpac#add('junegunn/fzf.vim')
     call minpac#add('antoinemadec/coc-fzf')
+    call minpac#add('whatyouhide/vim-tmux-syntax')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
